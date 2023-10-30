@@ -1,3 +1,6 @@
 # Algorithms
 
-#Test version 1
+#Test version 2 
+
+#Burada bir açıklama yazıyor.
+#Eksik açıklamayı tamamlıyorum. 
