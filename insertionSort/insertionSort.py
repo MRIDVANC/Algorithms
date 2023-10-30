@@ -9,13 +9,16 @@ def insertion_sort(in_array):
 
         in_array[position] = current_value
 
+# Kullanıcıdan kaç adet sayı almak istediğini sor
+num_of_numbers = int(input("Kaç adet sayı gireceksiniz: "))
 
-# 5 adet sayıyı kullanıcıdan al
-print('5 adet sayı giriniz')
 dizi = []
-for _ in range(5):
-    sayi = int(input())
-    dizi.append(sayi)
+for _ in range(num_of_numbers):
+    try:
+        sayi = int(input("Sayıyı giriniz: "))
+        dizi.append(sayi)
+    except ValueError:
+        print("Hatalı giriş. Sayı harici bir karakter girdiniz. Sayı girişine devam ediliyor.")
 
 # Insertion Sort ile sıralama
 insertion_sort(dizi)
