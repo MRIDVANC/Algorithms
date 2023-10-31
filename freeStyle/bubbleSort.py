@@ -20,10 +20,12 @@ for i in range(5):
 meyveler = ["elma", "armut", "çilek"]
 print("Meyve listesi:", meyveler)
 
+
 # Fonksiyon tanımlama: Tekrar kullanılabilir işlevler tanımlama
 def topla(a, b):
-    sonuc = a + b
-    return sonuc
+    toplam_sonuc = a + b
+    return toplam_sonuc
+
 
 # Fonksiyon çağırma ve sonuç alınması
 sonuc = topla(3, 4)
