@@ -22,7 +22,7 @@ def division(division1, division2):
 while True:
     print(
         'Select the operation you want to perform:\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division'
-        '\n5. Exit')
+        '   \n5. Exit')
 
     choice = input("Your choice (1/2/3/4/5): ")
 
