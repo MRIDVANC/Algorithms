@@ -7,6 +7,7 @@ def quick_sort(arr):
         greater_than_pivot = [x for x in arr[1:] if x > pivot]
         return quick_sort(less_than_pivot) + [pivot] + quick_sort(greater_than_pivot)
 
+
 # Kullanıcıdan bir liste alalım
 sayilar = input("Sıralanacak sayıları boşluk bırakarak girin: ")
 sayi_listesi = list(map(int, sayilar.split()))
