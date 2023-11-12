@@ -31,19 +31,23 @@ def main():
 
     while True:
         print_board(board)  # Tahtayı görüntüler.
-        print(f"Player {current_player}'s turn. Enter row and column (e.g., '1 2'): ", end="")
+        print(f"Player {current_player}'s turn. Enter a position (1-9): ", end="")
 
         try:
-            row, col = map(int, input().split())
-            if row < 1 or row > 3 or col < 1 or col > 3 or board[row - 1][col - 1] != " ":
-                # Kullanıcının girdiği hamleyi doğrulayarak geçerli bir hamle mi kontrol eder.
-                print("Invalid input. Try again.")
+            position = int(input())
+            if position < 1 or position > 9:
+                print("Invalid input. Enter a number between 1 and 9.")
+                continue
+            row = (position - 1) // 3
+            col = (position - 1) % 3
+            if board[row][col] != " ":
+                print("Invalid input. Position is already taken.")
                 continue
         except ValueError:
-            print("Invalid input. Try again.")  # Sayı dışı bir giriş yapıldığında hata mesajı gösterir.
+            print("Invalid input. Enter a number between 1 and 9.")
             continue
 
-        board[row - 1][col - 1] = current_player  # Geçerli hamleyi tahtaya kaydeder.
+        board[row][col] = current_player  # Geçerli hamleyi tahtaya kaydeder.
 
         if check_winner(board, current_player):  # Kazanan kontrolü yapar.
             print_board(board)  # Son tahtayı görüntüler.
