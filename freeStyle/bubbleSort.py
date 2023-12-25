@@ -1,32 +1,16 @@
-sayi = 10
+karma = [9, 5, 6, 8, 47, 2, 3, -1, 24, 7, -6, 8, 5, 1, 34, -5]
 
-# Kullanıcıdan girdi alma:
-isim = input("Adınızı girin: ")
-print("Merhaba, " + isim)
-
-# Koşullu ifade: Bir koşula bağlı olarak kodun akışını değiştirme
-if sayi > 0:
-    print("Sayı pozitif.")
-elif sayi < 0:
-    print("Sayı negatif.")
-else:
-    print("Sayı sıfır.")
-
-# Döngüler: Belirli bir işlemi tekrarlamak için kullanılır.
-for i in range(5):
-    print("Döngü döngüde", i, ". kez çalıştı.")
-
-# Liste: Verileri gruplamak için kullanılır.
-meyveler = ["elma", "armut", "çilek"]
-print("Meyve listesi:", meyveler)
+n = len(karma)
 
 
-# Fonksiyon tanımlama: Tekrar kullanılabilir işlevler tanımlama
-def topla(a, b):
-    toplam_sonuc = a + b
-    return toplam_sonuc
+def bubbleSort():
+    for i in range(0, len(karma)):
+        for j in range(0, len(karma) - i - 1):
+            if karma[j] >= karma[j + 1]:
+                karma[j], karma[j + 1] = karma[j + 1], karma[j]
+    return karma
 
 
-# Fonksiyon çağırma ve sonuç alınması
-sonuc = topla(3, 4)
-print("Toplama sonucu:", sonuc)
+bubbleSort()
+print("Sorted array: ", karma)
+print('Length : ', len(karma))
