@@ -1,17 +1,18 @@
-def selection_sort(arr):
-    n = len(arr)
+karma = [9, 5, 6, 8, 47, 2, 3, -1, 24, 7, -6, 8, 5, 1, 34, -5]
+
+
+def selectionSort():
+    n = len(karma)
     for i in range(n):
-        min_idx = i
-        for j in range(i + 1, n):
-            if arr[j] < arr[min_idx]:
-                min_idx = j
-        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+        minIndex = i
+        for j in range(i+1,n):
+            if karma[j] < karma[minIndex]:
+                minIndex = j
 
-# Dizi oluşturma
-dizi = [64, 25, 12, 22, 11]
+        karma[i], karma[minIndex] = karma[minIndex], karma[i]
 
-# Selection Sort ile sıralama
-selection_sort(dizi)
+    return karma
 
-# Sıralanmış diziyi yazdırma
-print("Sıralanmış dizi:", dizi)
+selectionSort()
+
+print(karma)
